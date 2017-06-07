@@ -1,10 +1,11 @@
 #include <stdint.h>
+#include <stdio.h>
 
 float asm_log2(float x1);
 
 float c_log2(float n);
 
-int test_log2(void)
+void test_log2(void)
 {
 	float val = 0.1f;
 	
