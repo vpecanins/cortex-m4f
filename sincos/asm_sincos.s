@@ -39,9 +39,9 @@ asm_sincos:
     vldr s5, =0x3c4aadf9        @ a2 = 0.01237058
     vfma.f32 s5, s4, s1         @ s3 <= a2 + (90-x) * (a3 + a4 * (90-x) )
     vmul.f32 s2, s3, s0         @ s2 <= x * (a2 + x * (a3 + a4 * x) )
-    vmul.f32 s4, s5, s1         @ s2 <= (90-x) * (a2 + x * (a3 + a4 * (90-x) ) )
+    vmul.f32 s4, s5, s1         @ s2 <= (90-x) * (a2 + (90-x) * (a3 + a4 * (90-x) ) )
     vfma.f32 s0, s2, s0         @ s0 <= x + x^2 * (a2 + x * (a3 + a4 * x) )
-    vfma.f32 s1, s4, s1         @ s1 <= x + x^2 * (a2 + x * (a3 + a4 * x) )
+    vfma.f32 s1, s4, s1         @ s1 <= (90-x) + (90-x)^2 * (a2 + (90-x) * (a3 + a4 * (90-x) ) )
     tst r0, #0x80000000         @ {
     it ne                       @   Fix sign of sin according to input sign
     vnegne.f32 s1, s1           @ }
