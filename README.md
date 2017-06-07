@@ -17,6 +17,6 @@ log2(x) = exponent(x) + log2_taylor( mantissa(x) )
 
 The implementation only uses registers r0-r2 and s0-s3 so there's no need to push and pull data to the stack, using just 30 ASM instructions.
 
-### Sine
+### [Sine](/sin)
 
 Computes the sine of an angle between (-pi, pi). First, the angle is reduced to a value between (0, pi/2). Then calculate 4th degree Taylor polynomial and change the sign if necessary.
