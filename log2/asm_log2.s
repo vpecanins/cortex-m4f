@@ -6,7 +6,7 @@
 @ s0 = x1
 @ return value in s0
 @ Touched: MCU: r0, r1, r2; FPU: s0, s1, s2, s3
-asm_log:
+asm_log2:
     vmov r0, s0                 @ Move s0 to r0 to perfom bitwise logic
     lsr r1, r0, #23             @ Shift right to obtain exponent
     and r1, r1, #255            @ Put to zero all bits except exponent

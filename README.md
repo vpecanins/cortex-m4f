@@ -7,7 +7,7 @@ The functions follow the [ARM Procedure Call Standard](http://infocenter.arm.com
 
 ## Functions implemented so far
 
-### Logarithm Base-2
+### [Logarithm Base-2](/log2)
 
 This function exploits the layout of the IEEE754 representation that implicitly has the base 2 exponent and mantissa. The function calculates log2 from the mantissa using a 4th degree Taylor polynomial and adds the exponent extracted from IEEE754. The formula used is:
 
