@@ -20,3 +20,7 @@ The implementation only uses registers r0-r2 and s0-s3 so there's no need to pus
 ### [Sine](/sin)
 
 Computes the sine of an angle between (-pi, pi). First, the angle is reduced to a value between (0, pi/2). Then calculate 4th degree Taylor polynomial and change the sign if necessary.
+
+### [Sin+Cos](/sincos)
+
+Compute sine and cosine at the same time (IQ signal)
